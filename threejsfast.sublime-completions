@@ -1,0 +1,78 @@
+{
+  "scope": "source.js,source.js.embedded.html,source.coffee",
+  "completions":
+  [
+  "THREE",
+
+  {
+    "trigger": "Mesh",
+    "contents": "new THREE.Mesh( ${1:geometry}, ${2:material} );$0"
+  },
+
+  {
+    "trigger": "Object3D",
+    "contents": "new THREE.Object3D();$0"
+  },
+
+  {
+    "trigger": "Geometry",
+    "contents": "new THREE.Geometry();$0"
+  },
+
+  {
+    "trigger": "Box",
+    "contents": "new THREE.BoxGeometry( ${1:width}, ${2:height}, ${3:depth}, 1, 1, 1 );$0"
+  },
+
+  {
+    "trigger": "Sphere",
+    "contents": "new THREE.SphereGeometry( ${1:radius}, ${2:8}, ${3:6} );$0"
+  },
+
+  {
+    "trigger": "Plane",
+    "contents": "new THREE.PlaneGeometry( ${1:width}, ${2:height}, 1, 1 );$0"
+  },
+
+  {
+    "trigger": ".add",
+    "contents": ".add( ${1:child} );$0"
+  },
+
+  {
+    "trigger": "Phong",
+    "contents": "new THREE.MeshPhongMaterial( { $2color: ${1:color}, $3});$0"
+  },
+
+  {
+    "trigger": "Material",
+    "contents": "new THREE.MeshBasicMaterial( { $2color: ${1:color}, $3});$0"
+  },
+
+  {
+    "trigger": "0xfff",
+    "contents": "0xffffff$0"
+  },
+
+  {
+    "trigger": "Color",
+    "contents": "new THREE.Color( ${1:hex} );$0"
+  },
+
+  {
+    "trigger": "forarray",
+    "contents": "for( var i=0; i<${1:arrayname}.length; i++ ){\n  var o = ${1:arrayname}[ i ];\n  $2\n}",
+  },
+
+  {
+    "trigger": "forobject",
+    "contents": "for( var i in ${1:object} ){\n  $2\n}",
+  },
+
+  {
+    "trigger": "makeView",
+    "contents": "function ${1:name}( ${2:args} ){\n  var view = new THREE.Object3D();$3\n  return view;\n}",
+  },
+
+  ]
+}
