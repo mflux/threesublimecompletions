@@ -81,10 +81,10 @@ makeView
 
 MakeMesh
 -------------
-   var nameGeometry = new THREE.typeGeometry();
-   var nameMaterial = new THREE.typeMaterial();
-   var nameMesh = new THREE.Mesh( nameGeometry, nameMaterial );
+    var nameGeometry = new THREE.typeGeometry();
+    var nameMaterial = new THREE.typeMaterial();
+    var nameMesh = new THREE.Mesh( nameGeometry, nameMaterial );
 
 MakeBox (plane, sphere etc)
 -------------
-  var box = new THREE.Mesh( new THREE.BoxGeometry( width, height, depth, 1, 1, 1 ), new THREE.MeshPhongMaterial( { color: color } ) );
+    var box = new THREE.Mesh( new THREE.BoxGeometry( width, height, depth, 1, 1, 1 ), new THREE.MeshPhongMaterial( { color: color } ) );
