@@ -1,6 +1,8 @@
 # threesublimecompletions
 Quick completions for THREE.js Sublime Text
 
+![Animated gif showing completions](http://i.imgur.com/WPlkran.gif)
+
 Place the threejsfast.sublime-completions into your Sublime Text 3/Packages/User folder
 
 Mesh
