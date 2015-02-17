@@ -1,5 +1,5 @@
-# threesublimecompletions
-Fast THREE.js Sublime Text completions for the lazy typist.
+# Lazy THREE.js Sublime Completions
+Fast THREE.js Sublime Text completions for the fatigued typist.
 
 ![Animated gif showing completions](http://i.imgur.com/WPlkran.gif)
 
@@ -47,9 +47,14 @@ Phong
 -------------
     new THREE.MeshPhongMaterial( options );
 
-Material
+MatOpts
 -------------
-    new THREE.MeshBasicMaterial( options );
+    {
+      color: 0xffffff,
+      specular: 0xffffff,
+      shininess: 30,
+      map: undefined,
+    }
 
 loadTexture
 -------------
