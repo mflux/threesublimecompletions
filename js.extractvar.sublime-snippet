@@ -1,9 +1,0 @@
-<snippet>
-    <content><![CDATA[${1:variablename}$2var ${1:variablename} = $SELECTION;$0]]></content>
-    <!-- Optional: Tab trigger to activate the snippet -->
-    <!-- <tabTrigger>extract</tabTrigger> -->
-    <!-- Optional: Scope the tab trigger will be active in -->
-    <scope>source.js</scope>
-    <!-- Optional: Description to show in the menu -->
-    <description>Extracts selection to a var</description>
-</snippet>
