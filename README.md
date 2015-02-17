@@ -7,7 +7,7 @@ Install
 =============
 Place the threejsfast.sublime-completions into your Sublime Text 3/Packages/User folder
 
-The following keywords will generate the following when hitting tab...
+These keywords will generate the following when hitting tab...
 
 Mesh
 -------------
