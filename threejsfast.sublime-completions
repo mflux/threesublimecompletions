@@ -15,8 +15,18 @@
   },
 
   {
+    "trigger": "Group",
+    "contents": "new THREE.Group();$0"
+  },
+
+  {
     "trigger": "Geometry",
     "contents": "new THREE.Geometry();$0"
+  },
+
+  {
+    "trigger": "MakeBox",
+    "contents": "var box = new THREE.Mesh( new THREE.BoxGeometry( ${1:width}, ${2:height}, ${3:depth}, 1, 1, 1 ), new THREE.MeshPhongMaterial( { color: ${4:color} } ) );$0"
   },
 
   {
@@ -25,8 +35,18 @@
   },
 
   {
+    "trigger": "MakeSphere",
+    "contents": "var sphere = new THREE.Mesh( new THREE.SphereGeometry( ${1:radius}, 8, 6 ), 1, 1, 1 ), new THREE.MeshPhongMaterial( { color: ${2:color} } ) );$0"
+  },
+
+  {
     "trigger": "Sphere",
-    "contents": "new THREE.SphereGeometry( ${1:radius}, ${2:8}, ${3:6} );$0"
+    "contents": "new THREE.SphereGeometry( ${1:radius}, 8, 6 );$0"
+  },
+
+  {
+    "trigger": "MakePlane",
+    "contents": "var plane = new THREE.Mesh( new THREE.PlaneGeometry( ${1:width}, ${2:height}, 1, 1 ), new THREE.MeshPhongMaterial( { color: ${4:color} } ) );$0"
   },
 
   {
@@ -35,18 +55,33 @@
   },
 
   {
+    "trigger": "MakeMesh",
+    "contents": "var ${1:name}Geometry = new THREE.${2:type}Geometry();\nvar ${1:name}Material = new THREE.${3:type}Material();\nvar ${1:name}Mesh = new THREE.Mesh( ${1:name}Geometry, ${1:name}Material );$0"
+  },
+
+  {
+    "trigger": "MakeLine",
+    "contents": "var ${1:name}Geometry = new THREE.${2:type}Geometry();\nvar ${1:name}Material = new THREE.${3:type}Material();\nvar ${1:name}Line = new THREE.Line( ${1:name}Geometry, ${1:name}Material, THREE.LineStrip );$0"
+  },
+
+  {
     "trigger": ".add",
     "contents": ".add( ${1:child} );$0"
   },
 
   {
+    "trigger": ".remove",
+    "contents": ".remove( ${1:child} );$0"
+  },
+
+  {
     "trigger": "Phong",
-    "contents": "new THREE.MeshPhongMaterial( { $2color: ${1:color}, $3});$0"
+    "contents": "new THREE.MeshPhongMaterial(${1:options});$0"
   },
 
   {
     "trigger": "Material",
-    "contents": "new THREE.MeshBasicMaterial( { $2color: ${1:color}, $3});$0"
+    "contents": "new THREE.MeshBasicMaterial(${1:options});$0"
   },
 
   {
@@ -61,7 +96,7 @@
 
   {
     "trigger": "forarray",
-    "contents": "for( var i=0; i<${1:arrayname}.length; i++ ){\n  var o = ${1:arrayname}[ i ];\n  $2\n}",
+    "contents": "for( var i=0; i<${1:arrayname}.length; i++ ){\n  var o = ${1:arrayname}[ i ];\n  $2\n}%0",
   },
 
   {
@@ -70,9 +105,29 @@
   },
 
   {
-    "trigger": "makeView",
-    "contents": "function ${1:name}( ${2:args} ){\n  var view = new THREE.Object3D();$3\n  return view;\n}",
+    "trigger": "MakeView",
+    "contents": "function ${1:name}( ${2:args} ){\n  var view = new THREE.Group();$3\n  return view;\n}",
   },
+
+  {
+    "trigger": "loadTexture",
+    "contents": "THREE.ImageUtils.loadTexture( ${1:filepath} );$0"
+  },
+
+  {
+    "trigger": ".traverse",
+    "contents": ".traverse( function( o ){\n  $1\n});$0"
+  },
+
+  {
+    "trigger": ".position.set",
+    "contents": "position.set( ${1:x}, ${2:y}, ${3:z} );$0"
+  },
+
+  {
+    "trigger": "Matopts",
+    "contents": "{\n  color: ${1:0xffffff},\n  specular: ${2:0xffffff},\n  shininess: ${3:30},\n  map: ${4:undefined},\n}$0"
+  }
 
   ]
 }

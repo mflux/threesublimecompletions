@@ -1,17 +1,21 @@
 # threesublimecompletions
-Quick completions for THREE.js Sublime Text
+Fast THREE.js Sublime Text completions for the lazy typist.
 
 ![Animated gif showing completions](http://i.imgur.com/WPlkran.gif)
 
+Install
+=============
 Place the threejsfast.sublime-completions into your Sublime Text 3/Packages/User folder
+
+The following keywords will generate the following when hitting tab...
 
 Mesh
 -------------
     new THREE.Mesh( geometry, material );
 
-Object3D
+Group
 -------------
-    new THREE.Object3D();
+    new THREE.Group();
 
 Geometry
 -------------
@@ -21,6 +25,10 @@ Box
 -------------
     new THREE.BoxGeometry( width, height, depth, 1, 1, 1 );
 
+Sphere
+-------------
+    new THREE.SphereGeometry( radius, 8, 6 );
+
 Plane
 -------------
     new THREE.PlaneGeometry( width, height, 1, 1 );
@@ -29,17 +37,23 @@ Plane
 -------------
     .add( child );
 
+.traverse
+-------------
+    .traverse( function( o ){
+
+    });
+
 Phong
 -------------
-    new THREE.MeshPhongMaterial({
-      color: color
-    });
+    new THREE.MeshPhongMaterial( options );
 
 Material
 -------------
-    new THREE.MeshBasicMaterial({
-      color: color
-    });
+    new THREE.MeshBasicMaterial( options );
+
+loadTexture
+-------------
+    THREE.ImageUtils.loadTexture( filepath );
 
 0xfff
 -------------
@@ -49,9 +63,23 @@ Color
 -------------
     new THREE.Color( hex );
 
+
+Extreme Lazy Mode
+=============
+
 makeView
 -------------
     function viewFunc( args ){
-      var view = new THREE.Object3D();
+      var view = new THREE.Group();
       return view;
-    }",
+    }
+
+MakeMesh
+-------------
+   var nameGeometry = new THREE.typeGeometry();
+   var nameMaterial = new THREE.typeMaterial();
+   var nameMesh = new THREE.Mesh( nameGeometry, nameMaterial );
+
+MakeBox (plane, sphere etc)
+-------------
+  var box = new THREE.Mesh( new THREE.BoxGeometry( width, height, depth, 1, 1, 1 ), new THREE.MeshPhongMaterial( { color: color } ) );
